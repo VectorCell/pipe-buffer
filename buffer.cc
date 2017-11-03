@@ -63,7 +63,7 @@ size_t get_buffer_size(const vector<string>& args)
 			return size;
 		}
 	}
-	return 0;
+	return 1 << 20; // default value of 1M
 }
 
 void pass_through_io (size_t buf_size, FILE *infile, FILE *outfile)
